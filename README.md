@@ -18,7 +18,7 @@ Eat your
 </multi-link>.
 ```
 
-See the [examples](???) page.
+See the [examples](https://github.com/ndw/multi-link) page.
 
 # Background
 
@@ -74,7 +74,7 @@ get more and better tutorials than I could write at this stage.
 
 The `<multi-link>` web component can be added to any web page by
 importing the `src/js/multi-link.js` script into your page. You can
-see this in the [examples](???).
+see this in the [examples](https://github.com/ndw/multi-link).
 
 The `<multi-link>` element should contain a mixture of text and links
 (no nested structure is supported). For accessibility purposes, you
@@ -186,7 +186,7 @@ example above, the markup that renders the dropdown is:
 
 You can use the `::part()` selector to reach into the structure.
 
-Take the “movies” list from [examples](???) page. It’s identified with
+Take the “movies” list from [examples](https://github.com/ndw/multi-link) page. It’s identified with
 `<multi-link class='movies'>`. So we can style links in the dropdown with:
 
 ``` css
