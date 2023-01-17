@@ -1,0 +1,42 @@
+:root {
+}
+
+html {
+    font-size: 16pt;
+}
+
+body {
+    /* Leave room for the dropdown near the bottom of the page. */
+    padding-bottom: 4rem;
+}
+
+.example {
+    margin-left: 2rem;
+    margin-right: 2rem;
+    padding-left: 1rem;
+    border: 2px solid #aaaaaa;
+    border-radius: 1rem;
+}
+
+a, a:visited {
+    color: blue;
+}
+
+multi-link::part(linktext) {
+    color: blue;
+}
+
+multi-link.docbook::part(heading) {
+    background-color: rgb(73, 162, 164);
+    color: white;
+}
+
+multi-link.movies::part(linktext) {
+    color: green;
+}
+
+multi-link.movies::part(link):hover {
+    background-color: green;
+    color: white;
+}
+
