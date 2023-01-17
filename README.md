@@ -121,8 +121,8 @@ The `<multi-link>` component has three attributes:
 <dl>
 <dt>link-text</dt>
 <dd>Alternate text to use as the link text.</dd>
-<dt>header</dt>
-<dd>A header row for the dropdown list.</dd>
+<dt>heading</dt>
+<dd>A heading row for the dropdown list.</dd>
 <dt>width</dt>
 <dd>The width of the dropdown.</dd>
 </dl>
