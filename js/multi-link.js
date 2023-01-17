@@ -1,3 +1,8 @@
+/* Multi-Link web component, see https://github.com/ndw/multi-link
+   Copyright © 2023 Norm Tovey-Walsh
+   Version 0.0.1
+*/
+
 class MultiEndedLink extends HTMLElement {
   static observedAttributes = ['link-text', 'heading', 'width']
 
