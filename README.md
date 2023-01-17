@@ -13,7 +13,7 @@ Put multi-links in your content like this:
 
 ``` xml
 Eat your
-<multi-link link-text="vegetables" heading="Selected vegetables from Wikipedia">
+<multi-link link-text="vegetables" header="Selected vegetables from Wikipedia">
 <a href="https://en.wikipedia.org/wiki/Carrot">Carrots</a>,
 <a href="https://en.wikipedia.org/wiki/Parsnip">Parsnips</a>, or
 <a href="https://en.wikipedia.org/wiki/Leek">Leeks</a>
@@ -121,8 +121,8 @@ The `<multi-link>` component has three attributes:
 <dl>
 <dt>link-text</dt>
 <dd>Alternate text to use as the link text.</dd>
-<dt>heading</dt>
-<dd>A heading row for the dropdown list.</dd>
+<dt>header</dt>
+<dd>A header row for the dropdown list.</dd>
 <dt>width</dt>
 <dd>The width of the dropdown.</dd>
 </dl>
@@ -154,7 +154,7 @@ The body of that template looks like this:
 <span class="linkmenu" part="linkmenu">
   <a href="#" class="linktext" part="linktext"></a>
   <span class="dropdown" part="dropdown">
-    <span class="heading" part="heading"></span>
+    <span class="header" part="header"></span>
     <span class="link" part="link"></span>
   </span>
 </span>
@@ -169,7 +169,7 @@ example above, the markup that renders the dropdown is:
 <span class="linkmenu" part="linkmenu">
   <a href="#" class="linktext" part="linktext">DocBook (Wikipedia)</a>
   <span class="dropdown" part="dropdown">
-    <span class="heading" part="heading"></span>
+    <span class="header" part="header"></span>
     <span class="link" part="link">
       <a part="anchor" href="https://en.wikipedia.org/wiki/DocBook">DocBook (Wikipedia)</a>
     </span>
