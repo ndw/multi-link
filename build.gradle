@@ -1,0 +1,36 @@
+defaultTasks 'publish'
+
+task publish(
+  dependsOn: ["publish_example", "publish_resources"]
+) {
+  // Just somewhere to hang dependencies
+}
+
+task publish_example(
+  type: Copy
+) {
+  into "${buildDir}/www"
+  from "${projectDir}/src/example"
+}
+
+task publish_resources(
+) {
+  inputs.dir "${projectDir}/src/js"
+  inputs.dir "${projectDir}/src/css"
+  outputs.dir "${buildDir}/www/js"
+  outputs.dir "${buildDir}/www/css"
+
+  doLast {
+    copy {
+      into "${buildDir}/www/js"
+      from "${projectDir}/src/js"
+    }
+  }
+
+  doLast {
+    copy {
+      into "${buildDir}/www/css"
+      from "${projectDir}/src/css"
+    }
+  }
+}

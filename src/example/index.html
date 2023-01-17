@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Multi-link examples</title>
+<link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+<h1>Multi-link examples</h1>
+
+<p>This page contains a few examples of <code>&lt;multi-link&gt;</code>.
+</p>
+
+<div>
+<h2>The TL;DR example from the README</h2>
+
+<p>Without the multi-link web component (or without JavaScript enabled):</p>
+
+<div class="example">
+<p>Eat your
+<a href="https://en.wikipedia.org/wiki/Carrot">Carrots</a>,
+<a href="https://en.wikipedia.org/wiki/Parsnip">Parsnips</a>, or
+<a href="https://en.wikipedia.org/wiki/Leek">Leeks</a>.</p>
+</div>
+
+<p>With the web component:</p>
+
+<div class="example">
+<p>Eat your
+<multi-link link-text="vegetables" heading="Selected vegetables from Wikipedia">
+<a href="https://en.wikipedia.org/wiki/Carrot">Carrots</a>,
+<a href="https://en.wikipedia.org/wiki/Parsnip">Parsnips</a>, or
+<a href="https://en.wikipedia.org/wiki/Leek">Leeks</a>
+</multi-link>.</p>
+</div>
+</div>
+
+<div>
+<h2>A simple dropdown</h2>
+
+<p>Without multi-link:</p>
+
+<div class="example">
+<p>Links to homepages related to
+  <a href="https://norm.tovey-walsh.com/">Norm</a>
+  [see also <a href="https://nwalsh.com/">nwalsh.com</a>
+  and <a href="https://so.nwalsh.com/">So…</a>].
+</p>
+</div>
+
+<p>With multi-link:</p>
+
+<div class="example">
+<p>Links to homepages related to
+<multi-link>
+  <a href="https://norm.tovey-walsh.com/">Norm</a>
+  [see also <a href="https://nwalsh.com/">nwalsh.com</a>
+  and <a href="https://so.nwalsh.com/">So…</a>]
+</multi-link>.
+</p>
+</div>
+</div>
+
+<div>
+<h2>With link-text and a header</h2>
+
+<p>Without multi-link:</p>
+
+<div class="example">
+<p>Information about
+  <a href="https://en.wikipedia.org/wiki/DocBook">DocBook (Wikipedia)</a>
+  [see also <a href="https://docbook.org/">DocBook.org</a>,
+  <a href="https://tdg.docbook.org/">DocBook: The Definitive Guide</a>,
+  and <a href="https://xsltng.docbook.org/">DocBook xslTNG</a>].
+</p>
+</div>
+
+<p>With multi-link:</p>
+
+<div class="example">
+<p>Information about
+<multi-link class="docbook" link-text="DocBook" heading="DocBook web sites">
+  <a href="https://en.wikipedia.org/wiki/DocBook">DocBook (Wikipedia)</a>
+  [see also <a href="https://docbook.org/">DocBook.org</a>,
+  <a href="https://tdg.docbook.org/">DocBook: The Definitive Guide</a>,
+  and <a href="https://xsltng.docbook.org/">DocBook xslTNG</a>]
+</multi-link>.
+</p>
+</div>
+
+<p>The <a href="css/style.css">CSS stylesheet</a> uses a <code>::part()</code>
+selector to change the color of the heading.</p>
+</div>
+
+<div>
+<h2>More styling options</h2>
+
+<p>Without multi-link:</p>
+
+<div class="example">
+<p>Or maybe you’re more interested in
+<a href="https://en.wikipedia.org/wiki/Daniel_Craig">Daniel Craig</a>’s
+  recent films: <a href="https://en.wikipedia.org/wiki/Knives_Out">Knives Out</a>,
+  <a href="https://en.wikipedia.org/wiki/No_Time_to_Die">No Time to Die</a>,
+  and <a href="https://en.wikipedia.org/wiki/Glass_Onion:_A_Knives_Out_Mystery">Glass
+  Onion: A Knives Out Mystery</a>.
+</p>
+</div>
+
+<p>With multi-link</p>
+
+<div class="example">
+<p>Or maybe you’re more interested in
+<a href="https://en.wikipedia.org/wiki/Daniel_Craig">Daniel Craig</a>’s
+<multi-link class="movies" link-text="recent films" header="Daniel Craig Films">
+  recent films: <a href="https://en.wikipedia.org/wiki/Knives_Out">Knives Out</a>,
+  <a href="https://en.wikipedia.org/wiki/No_Time_to_Die">No Time to Die</a>,
+  and <a href="https://en.wikipedia.org/wiki/Glass_Onion:_A_Knives_Out_Mystery">Glass
+  Onion: A Knives Out Mystery</a>
+</multi-link>.
+</p>
+</div>
+
+<p>The <a href="css/style.css">CSS stylesheet</a> uses more <code>::part()</code>
+selectors to change the color of the links in the dropdown and the use of
+background color.</p>
+</div>
+
+<script src="js/multi-link.js"></script>
+</body>
+</html>
