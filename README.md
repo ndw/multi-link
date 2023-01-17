@@ -1,8 +1,10 @@
+# Multi-link
+
 Multi-link is a [web component](https://developer.mozilla.org/en-US/docs/Web/Web_Components)
 that supports one-to-many links in a manner that’s intended to be both
 accessible and easy to use.
 
-# TL;DR
+## TL;DR
 
 Copy the `src/js/multi-link.js` file somewhere convenient and add it to
 your web pages with a `script` element: `<script src="multi-link.js"></script>`.
@@ -20,7 +22,7 @@ Eat your
 
 See the [examples](https://ndw.github.io/multi-link/) page.
 
-# Background
+## Background
 
 We’re all used to writing one-to-one links, because that’s what browsers support.
 You can link to the
@@ -37,7 +39,7 @@ that in a way that supported accessibility.
 (In fact the [DocBook: xslTNG](https://xsltng.docbook.org/)
 stylesheets do exactly this, but they’re starting with richer markup.)
 
-# Using a web component
+## Using a web component
 
 I’ve been interested in web components for a while and I had the idea
 that it should be possible to have a “multi-link” component that
@@ -70,7 +72,7 @@ I’m not going to try to describe precisely how all this works. Put
 “writing a web component” in your favorite search engine and you’ll
 get more and better tutorials than I could write at this stage.
 
-# The multi-link web component
+## The multi-link web component
 
 The `<multi-link>` web component can be added to any web page by
 importing the `src/js/multi-link.js` script into your page. You can
@@ -112,7 +114,7 @@ recognize that it’s something to point at.
 In this case, the text of that first link doesn’t work especially
 well. You can override that with an attribute.
 
-## The attributes
+### The attributes
 
 The `<multi-link>` component has three attributes:
 
@@ -134,7 +136,7 @@ reasonably well for languages written in a latin script. It might work
 less well for other scripts, and you might just want to set the width,
 so you can.
 
-# Styling the component
+## Styling the component
 
 Styling web components is a little tricky. They live in an isolated
 world (the shadow DOM). This is important because it means that they
@@ -208,7 +210,7 @@ multi-link.movies::part(linktext) a { … }
 
 That won’t work. That’s why I put `anchor` parts on the anchors.
 
-# Caveats
+## Caveats
 
 It works on mobile, but it’s not easy to reposition the screen if the
 dropdown oveflows. I’m not sure how best to fix that.
