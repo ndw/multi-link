@@ -4,7 +4,7 @@
 */
 
 class MultiEndedLink extends HTMLElement {
-  static observedAttributes = ['link-text', 'heading', 'width']
+  static observedAttributes = ['link-text', 'header', 'width']
 
   constructor() {
     super();
@@ -18,7 +18,7 @@ class MultiEndedLink extends HTMLElement {
       <span class="linkmenu" part="linkmenu">
         <a href="#" class="linktext" part="linktext"></a>
         <span class="dropdown" part="dropdown">
-          <span class="heading" part="heading"></span>
+          <span class="header" part="header"></span>
           <span class="link" part="link"></span>
         </span>
       </span>
@@ -51,7 +51,7 @@ class MultiEndedLink extends HTMLElement {
   z-index: 1;
   overflow-x: scroll;
 }
-.dropdown .heading {
+.dropdown .header {
   background-color: rgba(0, 0, 0, .1);
   color: black;
   font-family: sans-serif;
@@ -63,7 +63,7 @@ class MultiEndedLink extends HTMLElement {
 .dropdown span:hover {
   background-color: rgba(0, 0, 255, .1);
 }
-.dropdown span.heading:hover {
+.dropdown span.header:hover {
   background-color: rgba(0, 0, 0, .1);
 }
 .linkmenu:hover .dropdown {
@@ -90,7 +90,7 @@ a, a:visited {
     template.appendChild(linkmenu);
 
     span = makeSpan("dropdown");
-    span.appendChild(makeSpan("heading"));
+    span.appendChild(makeSpan("header"));
     span.appendChild(makeSpan("link"));
     linkmenu.appendChild(span);
 
@@ -120,9 +120,9 @@ a, a:visited {
       const dropdown = linkmenu.querySelector(".dropdown");
 
       let maxwidth = 0;
-      const headspan = this.shadowRoot.querySelector(".heading");
-      if (this.props["heading"]) {
-        headspan.innerHTML = this.props["heading"];
+      const headspan = this.shadowRoot.querySelector(".header");
+      if (this.props["header"]) {
+        headspan.innerHTML = this.props["header"];
         maxwidth = approximateWidth(headspan.innerHTML.toString());
       } else {
         headspan.style.display = "none";
